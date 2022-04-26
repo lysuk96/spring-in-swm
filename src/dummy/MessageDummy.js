@@ -5,12 +5,15 @@ const messageSchema = new Schema({
   receiver: String,
   content: String,
   time: Date
+  matched: Boolean // 새로 추가
 })
 */
 
 export default
 [{
   content: "ㅎㅇ",
+  matched: true,
+  sender: "김우연",
 },
 {
   content: "ㅋ반가워 우리 친해지자",

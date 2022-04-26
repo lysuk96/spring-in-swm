@@ -1,31 +1,30 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
+
 import '../scss/RollSheet.scss'
+import mailBox from '../scss/image/mail.png'
 import Data from '../dummy/MessageDummy.js'
+import { useHistory } from 'react-router-dom'
+
 function RollSheet(){
 
     let [note,setNote] = useState(Data)
-    let [loader, setLoader] = useState(true)
-    var start = true
 
     return(
         <div>
             <div class="container" >
-                <h1 style={{marginTop: '50px', marginBottom: '10px',fontFamily: 'Yeon Sung, cursive', fontSize:'3rem'}}>롤링페이퍼</h1>
-                <h6 style ={{fontFamily: 'Yeon Sung, cursive', fontSize:'1.75rem'}}>매일 자정 새로운 쪽지함이 열려요! 누가 또 저에게 쪽지를 보냈을까요?</h6>
-                {/* <h6 style ={{marginBottom: '20px', fontFamily: 'Yeon Sung, cursive', fontSize:'1.5rem'}}>나와 시그널이 통한 친구는 현재까지 <strong>'3명'</strong> 이네요!</h6> */}
+                <h1 style={{marginTop: '50px', marginBottom: '10px',fontFamily: 'Yeon Sung, cursive', fontSize:'3rem'}}>두근두근 쪽지함</h1>
+                <h6 style ={{fontFamily: 'Yeon Sung, cursive', fontSize:'1.75rem'}}>매일 자정 새로운 쪽지들이 열려요! 매칭된 상대를 클릭해보세요!</h6>
             </div>
             <div class="container" style={{marginTop: '50px'}}>
-                <img class="mail-box" style={{marginTop:'0px', marginBottom:'50px'}}/>
-                {/* {loader ? <Loader type="spin" color="black" message="쪽지를 불러오는 중입니다" ></Loader> :  */}
+                <img class="mail-box" src={mailBox} style={{width:'150px', height:'150px', marginTop:'0px', marginBottom:'20px', border:'0px'}}/>
                         <div class="row">
                             {
                                 note.map((message, index) => {
-                                    return <Card note={message} 
+                                    return <Card note={message}
                                     index={index} />
                                 })
                             }
                         </div>
-                {/* } */}
             </div>
             <div style={{marginTop:'50px'}}><br/></div>
         </div>
@@ -48,15 +47,30 @@ function Card(props){
             fontSize: '1.5rem'
         }
     }
-    
+
+    let history = useHistory()
+    let path = '/members/'
+
     console.log(JSON.stringify(props.note))
-    return(
-        <div class = "square" style={styledRandom(props.index)}>
-            <div class = "content" >
-                {props.note.content}
-            </ div>
-        </ div>
-    )
+    if (props.note.matched) {
+        return(
+            <div class = "square-matched" style={styledRandom(props.index)} onClick = {()=>{history.push(path);}}>
+                <div class = "content" >
+                    {props.note.content}
+                    <h6></h6>
+                    <h5>by. {props.note.sender}</h5>
+                </ div>
+            </div>
+        )
+    } else{
+        return(
+            <div class = "square" style={styledRandom(props.index)}>
+                <div class = "content" >
+                    {props.note.content}
+                </ div>
+            </div>
+        )
+    }
 }
 
 export default RollSheet
