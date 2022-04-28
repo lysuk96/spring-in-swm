@@ -1,9 +1,33 @@
 import React, {useState, useEffect} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
+import {
+    CardContainer,
+    Card,
+    MemberName,
+    TagContainer,
+    Tag,
+    Detail,
+  } from './Members.element';
+
 function Members(props) {
+    // console.log(props)
+
     return(
-        <div></div>
+        <CardContainer>
+            
+            {props.members.map((member)=> 
+            <Card>
+            <MemberName >{member.name}</MemberName>
+            <Detail style={{ fontSize: '14px' }}>
+            {member.status}
+            </Detail>
+            <TagContainer>
+            <Tag type={member.tags}>{member.tags}</Tag>
+            </TagContainer>
+        </Card>)}
+      </CardContainer>
+        
     )
 }
 

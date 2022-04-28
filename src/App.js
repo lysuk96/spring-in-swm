@@ -8,7 +8,7 @@ import './App.css';
 
 //component
 import Data from './dummy/UserDummy.js';
-import Members from './component/Members.js'
+import Members from './component/Members/Members.js'
 import MembersDetail from './component/MembersDetail.js'
 import Home from './component/Home.js'
 import RollSheet from './component/RollSheet.js'
