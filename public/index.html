@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -15,7 +15,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -30,16 +30,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="jquery.fullpage.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="jquery.fullpage.js"></script>
-    <script src="main.js"></script>
-    <title>오늘의설렘</title>
+    <title>React App</title>
   </head>
   <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -50,125 +45,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div id="fullpage">
-      <div class="section">
-          <div class = "container">
-            <div class = "header">
-            <h1><a href="#">Twelve O'clock</a></h1>
-             <div class="nav">
-              <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PROFILE</a></li>
-                <li><a href="#">MY MESSAGE</a></li>
-                <li><a href="#">LOGIN</a></li>
-              </ul>
-            </div>
-            </div>
-            <div class="hero">
-              <h2>
-                난 네게로 넌 내게로, <br> <span class="ours2">설렘</span>을 전하다.
-              </h2>
-              <p>지금 당신과 함께하는 그/그녀가 당신에게 설렘을 주나요?<br>
-                <span class="ours">오늘의설렘</span>을 통해 익명의 메시지를 보내보세요.
-              </p>
-              <button>GO TO GROUPS
-              </button>
-          </div>
-      </div>
-      </div>
-      <div class="section">
-        <div class = "container2">
-          <div class="letter">
-            <img src="../images/letter.png" class="img">
-          </div>
-          <div class="hero1">
-            <h2 class="message">
-              # 하루에 한 번
-            </h2>
-            <p class="message_small">"오늘은 누가 나에게 메시지를 보냈을까?"<br>
-              <span style="color:rgb(253, 86, 114);font-weight: bold;">매일 밤 12시</span>, <br> 오늘 나에게 도착한 메시지를 확인할 수 있습니다.
-            </p>
-        </div>
-        <div class="anon">
-          <img src="../images/anon2.png" class="img">
-        </div>
-        <div class="hero2">
-          <h2 class="message">
-            # 익명성
-          </h2>
-          <p class="message_small">"직접 연락하기에는 아직은 부담스러워..."<br>
-            <span class="ours">오늘의설렘</span> 서비스는 <br> <span style="color:rgb(253, 86, 114);font-weight: bold;">익명의 메시지</span>로 당신의 마음을 전달해 드립니다.
-          </p>
-      </div>
-      <div class="match">
-        <img src="../images/match.png" class="img">
-      </div>
-      <div class="hero3">
-        <h2 class="message">
-          # 자동 매칭
-        </h2>
-        <p class="message_small">난 네게로 넌 내게로, <br> 
-          서로에게 메시지를 보낸 경우, 서로의 존재를 알려드립니다. <br>
-          <span style="color:rgb(253, 86, 114);font-weight: bold;">이번 기회에 커피 한잔하며 서로에 대해 알아보는 건 어떤가요?</span>
-        </p>
-    </div>  
-    </div>
-      </div>
-      <div class="section">
-        <div class = "container3">
-          <div class = "circle1">
-            <p class="circle_text"># 1</p>
-            <img src="../images/premium-icon-anonymity-3201435.png" class="rounded">
-            <p class="circle_text">
-  나만의 프로필 <br>작성하기
-            </p>
-          </div>
-          <div class = "circle2">
-            <p class="circle_text"># 2</p> 
-            <img src="../images/free-icon-confidential-2857714.png" class="rounded">
-            <p class="circle_text">익명으로 <br>쪽지를 보내요
-            </p>
-          </div>
-          <div class="circle3">  
-            <p class="circle_text"># 3</p> 
-                    <img src="../images/credit-limit.png" class="rounded">
-            
-            <p class="circle_text">제한된 횟수만큼만 <br>보낼 수 있어요
-  
-            </p>
-          </div>
-          <div class="circle4">
-            <p class="circle_text"># 4</p> 
-            <img src="../images/premium-icon-lovers-5907173.png" class="rounded">
-          <p class="circle_text">
-              둘만 알 수 있는 <br>자동 매칭 서비스
-            </p>
-          </div>
-          </div>
-      </div>
-      <div class="section">
-        <div class = "container4">
-          <div class="hero">
-            <h2>
-              지금 바로 <span class="ours">오늘의설렘</span> 서비스를 통해 <br> 당신의 <span class="ours2">설렘</span>을 전달해보세요.
-            </h2>
-            <button>GO TO GROUPS
-            </button>
-        </div>
-      </div>
-      </div>
-    </div>
-  
-    <script>
-        new fullpage('#fullpage', {
-          //options here
-          autoScrolling:true,
-          scrollHorizontally:true
-        });
-      //methods
-      fullpage_api.setAllowScrolling(false); 
-    </script>
-    
-    </body>
-  </html>
-  
+  </body>
+</html>
