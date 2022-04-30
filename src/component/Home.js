@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom'
 function Home() {
     let path = '/members/'
     let history = useHistory()
-    
+
     return (
         <div>
             <div class = "section" id ="section1">
@@ -76,11 +76,12 @@ function Home() {
                 </div>
             </div>
             <div class = "section" id ="section3">
-            <div class = 'bottom'>
+                <div class = 'bottom'>
                     <h2>
-                        " 지금, 설레는 하루를 시작해보세요. "
+                        " 지금, <span class="ani">설레</span>는 하루를 시작해보세요. "
                     </h2>
-                </div>                <div class ='main'>
+                </div>                
+                <div class ='main'>
                     <div class = "circle" id="circle1">
                         <p class="circle_head"># 1</p>
                         <img src={profile} class="rounded"></img>

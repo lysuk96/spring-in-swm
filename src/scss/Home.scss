@@ -145,6 +145,11 @@
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(63, 63, 63, 0.945)), url("../scss/image/home/section3.png");
     // background-color:rgba(241, 145, 145, 0.1);
 }
+
+#section3 .main .circle{
+    transform:scale(0.8, 0.8)
+}
+
 #section3 .rounded {
     object-fit:contain;
     height: 200px;
@@ -208,7 +213,6 @@ font-family: 'GowunBatang-Regular';
 }
 
 #section3 .bottom h2{
-    float: clear;
     font-size: 3rem;
     font-weight: bold;
     font-style: italic;
@@ -220,6 +224,20 @@ font-family: 'GowunBatang-Regular';
     padding-bottom: 2%;
 }
 
+// #section3 .bottom .ani{
+//     --color-2: #ff24a4;
+//     --color-3: #E4A9A8;
+//     animation: color-animation 1s linear infinite;
+// }
+
+
+// @keyframes color-animation {
+//     11%   {color: var(--color-2)}
+//     33%   {color: var(--color-2)}
+//     66%   {color: var(--color-3)}
+//     99%   {color: var(--color-3)}
+//   }
+  
 
 @media (max-width: 1300px){
     #section1 .main{
@@ -251,9 +269,8 @@ font-family: 'GowunBatang-Regular';
         display:none;
     }
     #section3 img{
-        transform:scale(0.5, 0.5);
+        display: none;
     }
-
 }
 
 @media (max-height: 800px){
