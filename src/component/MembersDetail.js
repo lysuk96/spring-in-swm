@@ -35,7 +35,8 @@ const divStatus = {
 const divintroduction = {
     marginLeft : "10%",
     marginRight : "10%",
-    marginBottom : "30px"
+    marginBottom : "30px",
+    whiteSpace: "pre-line"
 }
 const imgimg = {
     width : "350px",
@@ -80,7 +81,7 @@ function MembersDetail() {
             <img style={imgimg}src={info.img} alt="No Image" />
             <div style={divName}>{info.name}</div>
             <div style={divStatus}>{info.status}</div>
-            <div style={divintroduction}>{info.introduction}</div>
+            <span style={divintroduction}>{info.introduction}</span>
             {/* <div style={divtag}>{info.tags}</div> */}
         </div>
         <Container>
