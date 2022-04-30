@@ -71,40 +71,15 @@ function Card(props) {
     if (isMatched) {
       return {
         boxShadow:
-          "0 0 5px " +
-          borderArray[idx % 4] +
-          ", 0 0 25px " +
-          borderArray[idx % 4] +
-          ", 0 0 50px " +
-          borderArray[idx % 4] +
-          ", 0 0 100px " +
-          borderArray[idx % 4],
-        transform:
-          "rotate(" +
-          rotate +
-          "deg)" +
-          "translateX(" +
-          x +
-          "px)" +
-          "translateY(" +
-          y +
-          "px)",
+          "0 0 5px " + borderArray[idx % 4] + ", 0 0 25px " + borderArray[idx % 4] + ", 0 0 50px " + borderArray[idx % 4] +", 0 0 100px " +borderArray[idx % 4],
+        transform: "rotate(" +rotate +"deg)" +"translateX(" +x +"px)" +"translateY(" +y +"px)",
         backgroundColor: array[idx % 4],
         fontFamily: font[idx % 5] + ", cursive",
         fontSize: "1.5rem",
       };
     } else {
       return {
-        transform:
-          "rotate(" +
-          rotate +
-          "deg)" +
-          "translateX(" +
-          x +
-          "px)" +
-          "translateY(" +
-          y +
-          "px)",
+        transform:"rotate(" +rotate +"deg)" +"translateX(" +x +"px)" +"translateY(" +y +"px)",
         backgroundColor: array[idx % 4],
         fontFamily: font[idx % 5] + ", cursive",
         fontSize: "1.5rem",
@@ -113,25 +88,19 @@ function Card(props) {
   };
 
   let history = useHistory();
-  let path = "/members/";
+  let path = "/members/" + props.note.senderId;
 
-  console.log(JSON.stringify(props.note));
   if (props.note.matched) {
+
     return (
-      <div
-        class="square-matched"
-        style={styledRandom(props.index, true)}
-        onClick={() => {
-          history.push(path);
-        }}
-      >
-        <div class="content">
-          {props.note.content}
-          <h6></h6>
-          <h6></h6>
-          <h5>by. {props.note.sender}</h5>
+        <div class="square-matched" style={styledRandom(props.index, true)} onClick={() => {history.push(path);}}>
+            <div class="content">
+                {props.note.content}
+                <h6></h6>
+                <h6></h6>
+                <h5>by. {props.note.sender}</h5>
+            </div>
         </div>
-      </div>
     );
   } else {
     return (
