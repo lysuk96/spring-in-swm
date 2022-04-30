@@ -74,7 +74,7 @@ function Home() {
             <div class = "section" id ="section3">
             <div class = 'bottom'>
                     <h2>
-                        " 우리, 설레는 하루를 만들어 보는건 어때요? "
+                        " 지금, 설레는 하루를 시작해보세요. "
                     </h2>
                 </div>                <div class ='main'>
                     <div class = "circle" id="circle1">
