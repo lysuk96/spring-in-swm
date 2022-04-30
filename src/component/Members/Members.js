@@ -1,34 +1,42 @@
-import React, {useState, useEffect} from 'react';
-import {useHistory, useParams} from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 
 import {
-    CardContainer,
-    Card,
-    MemberName,
-    TagContainer,
-    Tag,
-    Detail,
-  } from './Members.element';
+  Title,
+  SubTitle,
+  CardContainer,
+  Card,
+  MemberName,
+  Img,
+  TagContainer,
+  Tag,
+  Status,
+  Detail,
+} from "./Members.element";
 
 function Members(props) {
-    // console.log(props)
+  // console.log(props)
 
-    return(
-        <CardContainer>
-            
-            {props.members.map((member)=> 
-            <Card>
-            <MemberName >{member.name}</MemberName>
-            <Detail style={{ fontSize: '14px' }}>
-            {member.status}
-            </Detail>
+  return (
+    <>
+      <Title>
+        당신의 <span style={{ color: "#61527f" }}>설렘</span>을 찾아보세요
+      </Title>
+      <CardContainer>
+        {props.members.map((member) => (
+          <Card>
+            <MemberName>{member.name}</MemberName>
+            <Img src={member.img}></Img>
+            <Status>{member.status}</Status>
+
             <TagContainer>
-            <Tag type={member.tags}>{member.tags}</Tag>
+              <Tag type={member.tags}>{member.tags}</Tag>
             </TagContainer>
-        </Card>)}
+          </Card>
+        ))}
       </CardContainer>
-        
-    )
+    </>
+  );
 }
 
 // function Card(props) {

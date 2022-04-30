@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 .App {
   text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .App-logo {
@@ -7,16 +9,16 @@
   pointer-events: none;
 }
 
-.background-sakura{
+.background-sakura {
   background-position: center;
   color: white;
 }
 
-.list{
-  margin-top : 30px;
-  text-align : left;
+.list {
+  margin-top: 30px;
+  text-align: left;
   padding-left: 20px;
-  padding-right : 20px;
+  padding-right: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

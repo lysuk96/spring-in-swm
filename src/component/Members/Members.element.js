@@ -1,23 +1,33 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
+
+export const Title = styled.p`
+  margin-top: 30px;
+  font-size: 30px;
+`;
+
+export const SubTitle = styled.p`
+  font-size: 24px;
+`;
 
 export const CardContainer = styled.div`
-    display: flex;
-    height: 800px;
-    justify-content: center;
-    align-items: center;
-`
+  display: flex;
+  flex-wrap: wrap;
+  height: 1000px;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* width: 210px; */
-  width: 22%;
+  width: 28%;
   min-width: 210px;
-  height: 130px;
+  height: 400px;
   background-color: #efecf8;
   border-radius: 8px;
-  margin: 12px 8px;
+  margin: 24px 18px;
   padding: 20px 14px 20px 21px;
   color: #61527f;
   font-weight: 700;
@@ -36,20 +46,26 @@ export const Card = styled.div`
 
   @media screen and (max-width: 600px) {
     min-width: 300px;
-    height: 150px;
+    height: 400px;
     // padding: 20px 14px 15px 20px;
   }
   @media screen and (max-width: 900px) {
     min-width: 300px;
-    height: 150px;
+    height: 400px;
     // padding: 20px 14px 15px 20px;
   }
 `;
 
 export const MemberName = styled.p`
   width: 100%;
-  font-size: 18px;
+  font-size: 25px;
   word-wrap: break-word;
+`;
+
+export const Img = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 80%;
 `;
 
 export const TagContainer = styled.div`
@@ -70,10 +86,10 @@ export const Tag = styled.div`
   font-weight: 600;
   color: white;
   border-radius: 8px;
-  font-size: 11px;
-  ${({ type }) => type == 'FE' && `background: #0B099B;`}
-  ${({ type }) => type == 'BE' && `background: #ED6E69;`}
-  ${({ type }) => type == 'AI' && `background: #60B9CB;`}
+  font-size: 14px;
+  ${({ type }) => type == "FE" && `background: #0B099B;`}
+  ${({ type }) => type == "BE" && `background: #ED6E69;`}
+  ${({ type }) => type == "AI" && `background: #60B9CB;`}
 
 
   // font-size
@@ -84,16 +100,9 @@ export const Tag = styled.div`
   }
 `;
 
-export const Detail = styled.div`
-  font-size: 16px;
+export const Status = styled.div`
+  font-size: 18px;
 `;
-
-export const P = styled.p`
-  font-size: 14px;
-  ${({ text }) => text.length > 10 && `font-size: 10px;`}
-  margin-bottom: 8px;
-
-  @media screen and (max-width: 600px) {
-    font-size: 16px;
-  }
+export const Detail = styled.div`
+  font-size: 18px;
 `;
