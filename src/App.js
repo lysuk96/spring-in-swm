@@ -15,27 +15,14 @@ import RollSheet from './component/RollSheet.js'
 
 import {Link, Redirect, Route, Switch} from 'react-router-dom';
 
-import { withCookies, useCookies } from 'react-cookie';
 
 function App() {
 
   let [members, setMembers] = useState(Data);
-  let [cookies, removeCookie] = useCookies([ 'user' ]);
-  let [hasCookie, setHasCookie] = useState(false);
-
-  useEffect(() => {
-    if (console.user && cookies.user !== 'undefined') {
-      setHasCookie(true);
-    }
-  }, [cookies]);
 
   return(
     //네비게이션 바
     <div className="App">
-
-      {
-      !hasCookie ? <Redirect to="/" /> : <Redirect to="/members" />
-      }
 
       <Navbar bg="light" expand="lg">
       <Navbar.Brand href="/">우연히, 봄</Navbar.Brand>
@@ -54,13 +41,7 @@ function App() {
         </Route>
 
         <Route exact path="/members">
-          <Members members={members}
-            hasCookie={hasCookie}
-            setHasCookie={setHasCookie}
-            removeCookie={() => {
-              removeCookie('user');
-              setHasCookie(false); 
-            }} />
+          <Members members={members}/>
         </Route>
 
         <Route exact path="/members/:id">
