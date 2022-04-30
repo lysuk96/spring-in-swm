@@ -11,7 +11,8 @@ const wrap = {
     margin : "50px 50px",
     backgroundColor: "#efecf8",
     borderRadius: "8px",
-    boxShadow : "0 4px 8px 0 rgba(0, 0, 0, 0.2)"
+    boxShadow : "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+    color : "#61527f"
 }
 
 const infoBox = {
@@ -20,20 +21,26 @@ const infoBox = {
 }
 
 const divName = {
-    margin : "10px",
+    marginTop : "10px",
     fontSize : "30px",
     fontWeight : "bold"
 }
 
 const divStatus = {
     fontSize : "20px",
-    padding : "10px"
+    marginBottom : "25px",
+    fontWeight : "bold"
 }
 
 const divintroduction = {
-    paddingLeft : "10%",
-    paddingRight : "10%",
-    marginBottom : "20px"
+    marginLeft : "10%",
+    marginRight : "10%",
+    marginBottom : "30px"
+}
+const imgimg = {
+    width : "350px",
+    marginTop : "30px",
+    borderRadius : "3%"
 }
 // const divtag = {
 //     padding : "4px 10px",
@@ -64,10 +71,13 @@ function MembersDetail() {
         e.target.form.elements.paper.value = "";
     }
 
-    
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (<div style={wrap}>
         <div style={infoBox}>
-            <img src={info.img} width="350" alt="사진 없음." />
+            <img style={imgimg}src={info.img} alt="No Image" />
             <div style={divName}>{info.name}</div>
             <div style={divStatus}>{info.status}</div>
             <div style={divintroduction}>{info.introduction}</div>
