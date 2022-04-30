@@ -19,7 +19,9 @@ function Members(props) {
 
   return (
     <>
-      <Title>당신의 설렘을 찾아보세요</Title>
+      <Title>
+        당신의 <span style={{ color: "#61527f" }}>설렘</span>을 찾아보세요
+      </Title>
       <CardContainer>
         {props.members.map((member) => (
           <Card>

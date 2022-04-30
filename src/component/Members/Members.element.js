@@ -65,6 +65,7 @@ export const MemberName = styled.p`
 export const Img = styled.img`
   width: 120px;
   height: 120px;
+  border-radius: 80%;
 `;
 
 export const TagContainer = styled.div`

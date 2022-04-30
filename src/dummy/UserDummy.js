@@ -35,6 +35,12 @@ export default [
     name: "최현수",
     status: "이리콤",
     tags: "BE",
+    introduction: `
+    안녕하세요! 겉만 화려하기 보다는 속이 꽉 찬 개발자가 되고자 하는 주니어 백엔드 개발자 최현수입니다.
+    단순히 개발만 하기보다는, 팀원들과 함께 한 유저의 경험을 확 개선시킬 수 있을만한 서비스를 만드는 것이 제 목표입니다.
+
+    만나서 반갑고, 소마에서 오며가며 인사해요:)
+    `,
     img: "/imgs/chs.jpeg",
   },
 
@@ -95,6 +101,7 @@ export default [
     id: 5,
     name: "정찬이",
     status: "Born in the States",
-    tags: "BE",
+    tags: "FE",
+    img: "/imgs/snpy.png",
   },
 ];
