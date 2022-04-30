@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory, useParams, Link } from "react-router-dom";
 
 import {
   Title,
@@ -16,6 +16,8 @@ import {
 
 function Members(props) {
   // console.log(props)
+  let history = useHistory();
+  let path = "/members";
 
   return (
     <>
@@ -24,7 +26,11 @@ function Members(props) {
       </Title>
       <CardContainer>
         {props.members.map((member) => (
-          <Card>
+          <Card
+            onClick={() => {
+              history.push(`${path}/${member.id}`);
+            }}
+          >
             <MemberName>{member.name}</MemberName>
             <Img src={member.img}></Img>
             <Status>{member.status}</Status>
