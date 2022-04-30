@@ -7,8 +7,12 @@ import profile from '../scss/image/home/section3_profile.png'
 import shit from '../scss/image/home/section3_shit.png'
 import matched from '../scss/image/home/section3_match.png'
 import limit from '../scss/image/home/section3_limit.png'
+import { useHistory } from 'react-router-dom'
 
 function Home() {
+    let path = '/members/'
+    let history = useHistory()
+    
     return (
         <div>
             <div class = "section" id ="section1">
@@ -21,7 +25,7 @@ function Home() {
                         지금 당신과 함께하는 그/그녀가 당신에게 <span class="emph_hover">설렘</span>을 주나요?<br></br>
                         <span class="emph_hover">오늘의설렘</span>을 통해 익명의 메시지를 보내보세요.
                     </p>
-                    <button>
+                    <button class = "square-matched" onClick = {()=>{history.push(path);}}>
                         GO TO GROUPS
                     </button>
                 </div>
