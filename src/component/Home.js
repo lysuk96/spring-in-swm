@@ -23,7 +23,7 @@ function Home() {
                     </h2>
                     <p>
                         지금 당신과 함께하는 그/그녀가 당신에게 <span class="emph_hover">설렘</span>을 주나요?<br></br>
-                        <span class="emph_hover">오늘의설렘</span>을 통해 익명의 메시지를 보내보세요.
+                        <span class="emph_hover">우연히봄</span>을 통해 익명의 메시지를 보내보세요.
                     </p>
                     <button class = "square-matched" onClick = {()=>{history.push(path);}}>
                         GO TO GROUPS
@@ -55,7 +55,7 @@ function Home() {
                             </h2>
                             <p class="message_small">
                                 "직접 연락하기에는 아직은 부담스러워..."<br></br>
-                                <span class="emph_hover">오늘의설렘</span> 서비스는 <span class="emph">익명의 메시지</span>로  <br></br>
+                                <span class="emph_hover">우연히봄</span> 서비스는 <span class="emph">익명의 메시지</span>로  <br></br>
                                 당신의 마음을 전달해 드립니다.
                             </p>
                         </div>
